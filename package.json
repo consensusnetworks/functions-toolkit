@@ -7,6 +7,7 @@
   "scripts": {
     "build": "rimraf dist && tsc -P tsconfig.build.json && cpy src/simulateScript/deno-sandbox/**/* dist/simulateScript/deno-sandbox && yarn build:browser",
     "build:browser": "webpack && browserify dist/frontendSimulateScript.bundle.js -o dist/simulateScript.browser.js -p esmify --standalone simulateScript && rm dist/frontendSimulateScript.bundle.js",
+    "prepare": "npm run build",
     "test": "jest",
     "test:ci": "jest --silent --ci --coverage",
     "test:package": "jest --config jest.config.package.js",
@@ -42,15 +43,15 @@
     "@types/jest": "^29.5.1",
     "@types/node": "^18.16.3",
     "@types/prettier": "^2.7.3",
-    "babel-loader": "9.1.2",
-    "browserify": "17.0.0",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
+    "babel-loader": "9.1.2",
+    "browserify": "17.0.0",
     "cpy-cli": "^5.0.0",
-    "esmify": "2.1.1",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "esmify": "2.1.1",
     "jest": "^29.5.0",
     "nock": "^13.3.1",
     "prettier": "^3.0.3",
@@ -58,7 +59,8 @@
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4",
     "webpack": "5.82.1",
-    "webpack-cli": "5.1.1"
+    "webpack-cli": "5.1.1",
+    "yarn": "^1.22.21"
   },
   "prettier": {
     "printWidth": 100,
