@@ -6,33 +6,30 @@ Up-to-date documentation on Chainlink Functions can be found [here](https://docs
 
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Prerequisites](#prerequisites)
-  - [Functions Billing Subscription Management](#functions-billing-subscription-management)
-    - [Subscription Initialization](#subscription-initialization)
-    - [Create Subscription](#create-subscription)
-    - [Fund Subscription](#fund-subscription)
-    - [Adding/Removing Authorized Consumer Contracts](#addingremoving-authorized-consumer-contracts)
-    - [Cancelling Subscriptions](#cancelling-subscriptions)
-    - [Transferring and Accepting Transfers of Subscriptions](#transferring-and-accepting-transfers-of-subscriptions)
-    - [Get subscription details](#get-subscription-details)
-    - [Timing out requests](#timing-out-requests)
-    - [Estimating request costs](#estimating-request-costs)
-    - [Adding transaction options](#adding-transaction-options)
-  - [Functions Encrypted Secrets Management](#functions-encrypted-secrets-management)
-    - [Initialize a SecretsManager instance](#initialize-a-secretsmanager-instance)
-    - [Fetch public keys](#fetch-public-keys)
-    - [Encrypting Secrets](#encrypting-secrets)
-    - [DON Hosted Secrets](#don-hosted-secrets)
-    - [Off-chain Hosted Secrets](#off-chain-hosted-secrets)
-  - [Functions Response Listener](#functions-response-listener)
-  - [Functions Utilities](#functions-utilities)
-    - [Local Functions Simulator](#local-functions-simulator)
-    - [Local Functions Testnet](#local-functions-testnet)
-    - [Decoding Response Bytes](#decoding-response-bytes)
-    - [Storing Encrypted Secrets in Gists](#storing-encrypted-secrets-in-gists)
-    - [Building Functions Request CBOR Bytes](#building-functions-request-cbor-bytes)
-  - [Browser use](#browser-use)
+- [Functions Billing Subscription Management](#functions-billing-subscription-management)
+  - [Subscription Initialization](#subscription-initialization)
+  - [Create Subscription](#create-subscription)
+  - [Fund Subscription](#fund-subscription)
+  - [Adding/Removing Authorized Consumer Contracts](#addingremoving-authorized-consumer-contracts)
+  - [Cancelling Subscriptions](#cancelling-subscriptions)
+  - [Transferring and Accepting Transfers of Subscriptions](#transferring-and-accepting-transfers-of-subscriptions)
+  - [Get subscription details](#get-subscription-details)
+  - [Timing out requests](#timing-out-requests)
+  - [Estimating request costs](#estimating-request-costs)
+  - [Adding transaction options](#adding-transaction-options)
+- [Functions Encrypted Secrets Management](#functions-encrypted-secrets-management)
+  - [Initialize a SecretsManager instance](#initialize-a-secretsmanager-instance)
+  - [Fetch public keys](#fetch-public-keys)
+  - [Encrypting Secrets](#encrypting-secrets)
+  - [DON Hosted Secrets](#don-hosted-secrets)
+  - [Off-chain Hosted Secrets](#off-chain-hosted-secrets)
+- [Functions Response Listener](#functions-response-listener)
+- [Functions Utilities](#functions-utilities)
+  - [Local Functions Simulator](#local-functions-simulator)
+  - [Decoding Response Bytes](#decoding-response-bytes)
+  - [Storing Encrypted Secrets in Gists](#storing-encrypted-secrets-in-gists)
+  - [Building Functions Request CBOR Bytes](#building-functions-request-cbor-bytes)
+- [Browser use](#browser-use)
 
 # Prerequisites
 
@@ -587,7 +584,7 @@ return Functions.encodeString(escape("$hello*world?"));
 
 **_NOTE:_** The `simulateScript` function is a debugging tool and hence is not a perfect representation of the actual Chainlink oracle execution environment. Therefore, it is important to make a Functions request on a supported testnet blockchain before mainnet usage.
 
-### Local Functions Testnet
+<!-- ### Local Functions Testnet
 
 For debugging smart contracts and the end-to-end request flow on your local machine, you can use the `localFunctionsTestnet` function. This creates a local testnet RPC node with a mock Chainlink Functions contracts. You can then deploy your own Functions consumer contract to this local network, create and manage subscriptions, and send requests. Request processing will simulate the behavior of an actual DON where the request is executed 4 times and the discrete median response is transmitted back to the consumer contract. (Note that Chainlink Functions uses the following calculation to select the discrete median response: `const medianResponse = responses[responses.length - 1) / 2]`).
 
@@ -638,7 +635,7 @@ See an example of using the `localFunctionsTestnet` in the [Functions HardHat st
 
 **_NOTE:_** Cost estimates and other configuration values may differ significantly from actual values on live testnet or mainnet chains.
 
-**_NOTE:_** The `localFunctionsTestnet` function is a debugging tool and hence is not a perfect representation of the actual Chainlink oracle execution environment. Therefore, it is important to make a Functions request on a supported testnet blockchain before mainnet usage.
+**_NOTE:_** The `localFunctionsTestnet` function is a debugging tool and hence is not a perfect representation of the actual Chainlink oracle execution environment. Therefore, it is important to make a Functions request on a supported testnet blockchain before mainnet usage. -->
 
 ### Decoding Response Bytes
 

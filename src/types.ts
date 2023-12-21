@@ -1,5 +1,5 @@
 import type { Overrides, Contract, providers } from 'ethers'
-import type { Server } from 'ganache'
+// import type { Server } from 'ganache'
 
 export enum Location {
   Inline = 0,
@@ -236,12 +236,12 @@ export type GetFunds = (
   { weiAmount, juelsAmount }: { weiAmount?: bigint | string; juelsAmount?: bigint | string },
 ) => Promise<void>
 
-export type LocalFunctionsTestnet = {
-  server: Server
-  adminWallet: {
-    address: string
-    privateKey: string
-  }
-  getFunds: GetFunds
-  close: () => Promise<void>
-} & FunctionsContracts
+// export type LocalFunctionsTestnet = {
+//   server: Server
+//   adminWallet: {
+//     address: string
+//     privateKey: string
+//   }
+//   getFunds: GetFunds
+//   close: () => Promise<void>
+// } & FunctionsContracts
